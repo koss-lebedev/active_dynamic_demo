@@ -1,0 +1,27 @@
+<%= form_for(profile_field) do |f| %>
+  <% if profile_field.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile_field.errors.count, "error") %> prohibited this profile_field from being saved:</h2>
+
+      <ul>
+      <% profile_field.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :datatype %>
+    <%= f.select :datatype, datatypes_for_select %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
