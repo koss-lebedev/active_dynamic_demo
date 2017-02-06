@@ -16,8 +16,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @profile = Profile.new
-    @profile.assign_attributes(profile_params)
+    @profile = Profile.new(profile_params)
 
     if @profile.save
       redirect_to @profile, notice: 'Profile was successfully created.'
@@ -49,6 +48,6 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params.require(:profile).permit(*@profile.dynamic_attributes.map(&:name), :first_name, :last_name)
+      params.require(:profile).permit(*Profile.new.dynamic_attributes.map(&:name), :first_name, :last_name)
     end
 end
