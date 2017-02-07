@@ -1,0 +1,2 @@
+class ContactAttribute < ApplicationRecord
+end

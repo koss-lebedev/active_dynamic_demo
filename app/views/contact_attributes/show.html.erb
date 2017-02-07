@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact_attribute.name %>
+</p>
+
+<p>
+  <strong>Datatype:</strong>
+  <%= @contact_attribute.datatype %>
+</p>
+
+<%= link_to 'Edit', edit_contact_attribute_path(@contact_attribute) %> |
+<%= link_to 'Back', contact_attributes_path %>

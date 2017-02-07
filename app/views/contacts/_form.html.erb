@@ -1,10 +1,10 @@
-<%= form_for(profile) do |f| %>
-  <% if profile.errors.any? %>
+<%= form_for(contact) do |f| %>
+  <% if contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
       <ul>
-      <% profile.errors.full_messages.each do |message| %>
+      <% contact.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -21,7 +21,7 @@
     <%= f.text_field :last_name %>
   </div>
 
-  <% profile.dynamic_attributes.each do |attribute| %>
+  <% contact.dynamic_attributes.each do |attribute| %>
     <div class="field">
       <%= f.label attribute.name %>
       <%= f.text_field attribute.name %>

@@ -1,4 +1,4 @@
-module ProfileFieldsHelper
+module ContactAttributesHelper
 
   DATATYPES = [
       ['string', ActiveDynamic::DataType::String],

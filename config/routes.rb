@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :profile_fields
-  resources :profiles
+  resources :contact_attributes
+  resources :contacts
 
-  root 'profiles#index'
+  root 'contacts#index'
 end

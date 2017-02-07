@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112142323) do
+ActiveRecord::Schema.define(version: 20170207203227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,14 +27,14 @@ ActiveRecord::Schema.define(version: 20170112142323) do
     t.index ["customizable_type"], name: "index_active_dynamic_attributes_on_customizable_type", using: :btree
   end
 
-  create_table "profile_fields", force: :cascade do |t|
+  create_table "contact_attributes", force: :cascade do |t|
     t.string   "name"
     t.integer  "datatype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "profiles", force: :cascade do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.datetime "created_at", null: false

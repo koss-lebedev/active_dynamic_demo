@@ -1,2 +1,0 @@
-class ProfileField < ApplicationRecord
-end

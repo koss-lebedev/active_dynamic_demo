@@ -1,10 +1,10 @@
-<%= form_for(profile_field) do |f| %>
-  <% if profile_field.errors.any? %>
+<%= form_for(contact_attribute) do |f| %>
+  <% if contact_attribute.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(profile_field.errors.count, "error") %> prohibited this profile_field from being saved:</h2>
+      <h2><%= pluralize(contact_attribute.errors.count, "error") %> prohibited this contact_attribute from being saved:</h2>
 
       <ul>
-      <% profile_field.errors.full_messages.each do |message| %>
+      <% contact_attribute.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

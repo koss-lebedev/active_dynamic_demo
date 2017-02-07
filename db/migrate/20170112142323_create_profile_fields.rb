@@ -1,6 +1,6 @@
-class CreateProfileFields < ActiveRecord::Migration[5.0]
+class CreateContactAttributes < ActiveRecord::Migration[5.0]
   def change
-    create_table :profile_fields do |t|
+    create_table :contact_attributes do |t|
       t.string :name
       t.integer :datatype
 
