@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170207203227) do
+ActiveRecord::Schema.define(version: 20170112142323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 20170207203227) do
   create_table "active_dynamic_attributes", force: :cascade do |t|
     t.integer  "customizable_id",              null: false
     t.string   "customizable_type", limit: 50
-    t.string   "name",                         null: false
+    t.string   "display_name",                 null: false
+    t.string   "name"
     t.text     "value"
-    t.integer  "datatype",                     null: false
+    t.integer  "datatype"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["customizable_id"], name: "index_active_dynamic_attributes_on_customizable_id", using: :btree

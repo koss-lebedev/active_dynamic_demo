@@ -5,9 +5,10 @@ class CreateActiveDynamicAttributesTable < ActiveRecord::Migration[4.2]
       t.integer :customizable_id, null: false
       t.string :customizable_type, limit: 50
 
-      t.string :name, null: false
+      t.string :display_name, null: false
+      t.string :name
       t.text :value
-      t.integer :datatype, null: false
+      t.integer :datatype
 
       t.timestamps
     end

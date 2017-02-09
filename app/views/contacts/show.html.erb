@@ -12,7 +12,7 @@
 
 <% @contact.dynamic_attributes.each do |attribute| %>
     <p>
-      <strong><%= attribute.name %></strong>
+      <strong><%= attribute.display_name %></strong>
       <%= attribute.value %>
     </p>
 <% end %>
