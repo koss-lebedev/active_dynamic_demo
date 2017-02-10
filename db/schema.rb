@@ -16,12 +16,13 @@ ActiveRecord::Schema.define(version: 20170112142323) do
   enable_extension "plpgsql"
 
   create_table "active_dynamic_attributes", force: :cascade do |t|
-    t.integer  "customizable_id",              null: false
+    t.integer  "customizable_id",                              null: false
     t.string   "customizable_type", limit: 50
-    t.string   "display_name",                 null: false
+    t.string   "display_name",                                 null: false
     t.string   "name"
     t.text     "value"
     t.integer  "datatype"
+    t.boolean  "required",                     default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["customizable_id"], name: "index_active_dynamic_attributes_on_customizable_id", using: :btree
@@ -31,8 +32,9 @@ ActiveRecord::Schema.define(version: 20170112142323) do
   create_table "contact_attributes", force: :cascade do |t|
     t.string   "name"
     t.integer  "datatype"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "required",   default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "contacts", force: :cascade do |t|

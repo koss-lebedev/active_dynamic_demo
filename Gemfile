@@ -25,4 +25,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'simple_form'
-gem 'active_dynamic', '0.4.0'
+gem 'active_dynamic', '0.5.1'

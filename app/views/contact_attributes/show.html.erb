@@ -10,5 +10,10 @@
   <%= @contact_attribute.datatype %>
 </p>
 
+<p>
+  <strong>Required:</strong>
+  <%= @contact_attribute.required? %>
+</p>
+
 <%= link_to 'Edit', edit_contact_attribute_path(@contact_attribute) %> |
 <%= link_to 'Back', contact_attributes_path %>

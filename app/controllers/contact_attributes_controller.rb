@@ -44,6 +44,6 @@ class ContactAttributesController < ApplicationController
     end
 
     def contact_attribute_params
-      params.require(:contact_attribute).permit(:name, :datatype)
+      params.require(:contact_attribute).permit(:name, :datatype, :required)
     end
 end

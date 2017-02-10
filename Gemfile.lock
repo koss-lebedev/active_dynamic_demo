@@ -24,7 +24,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active_dynamic (0.4.0)
+    active_dynamic (0.5.1)
       activerecord (>= 4.0, < 5.1)
     activejob (5.0.1)
       activesupport (= 5.0.1)
@@ -163,7 +163,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_dynamic (= 0.4.0)
+  active_dynamic (= 0.5.1)
   better_errors
   binding_of_caller
   bootstrap-sass (~> 3.3.6)

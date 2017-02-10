@@ -6,7 +6,9 @@ class ContactAttributeProvider
 
   def call
     ContactAttribute.all.map do |field|
-      ActiveDynamic::AttributeDefinition.new(field.name, datatype: field.datatype)
+      ActiveDynamic::AttributeDefinition.new(field.name,
+                                             datatype: field.datatype,
+                                             required: field.required?)
     end
   end
 

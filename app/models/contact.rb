@@ -1,5 +1,5 @@
 class Contact < ApplicationRecord
-  include ActiveDynamic::HasDynamicAttributes
+  has_dynamic_attributes
 
   validates :first_name, presence: true
 end
