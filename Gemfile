@@ -24,5 +24,8 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# js runtime
+gem 'therubyracer'
+
 gem 'simple_form'
 gem 'active_dynamic', '0.5.1'
