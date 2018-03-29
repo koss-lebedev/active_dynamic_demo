@@ -6,6 +6,6 @@ default: &default
 development:
   <<: *default
   database: active_dynamic_demo_development
-  host: localhost
+  host: db-postgres
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>

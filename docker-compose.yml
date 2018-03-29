@@ -1,0 +1,32 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.1-alpine
+    env_file:
+      - .env_db
+    networks:
+      - db_net
+    volumes:
+      - db_data:/var/lib/postgresql/data/pgdata
+    restart: always
+
+  demo:
+    build: .
+    command: bash -c "rm -rf tmp/pids && mkdir -p tmp/pids && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - db_net
+    links:
+      - db:db-postgres
+    restart: always
+
+volumes:
+  db_data:
+
+networks:
+  db_net:
